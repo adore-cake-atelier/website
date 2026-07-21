@@ -28,11 +28,10 @@ body {
 
 .logo {
   display: block;
-  width: 220px;
-  max-width: 60vw;
+  width: 340px;
+  max-width: 80vw;
   height: auto;
-  margin: 0 auto 1.5rem;
-  border-radius: 8px;
+  margin: 0 auto 1rem;
 }
 
 h1 {
