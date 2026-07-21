@@ -62,125 +62,192 @@ h1 {
   color: var(--rose-dark);
 }
 
-/* Menu page */
+/* Custom Cakes Menu page */
 
-body.menu-page {
+body.cakes-menu-page {
+  --bg: #f4ede3;
+  --paper: #fffdf9;
+  --ink: #2c2420;
+  --muted: #8c7f74;
+  --line: #e8ddce;
+  --accent: #9a4a54;
+  --accent-hover: #7c3842;
+  --accent-soft: #f1e3df;
   display: block;
-}
-
-.menu {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 3rem 1.5rem 4rem;
-}
-
-.back-link {
-  display: inline-block;
-  margin-bottom: 2rem;
-  color: var(--rose-dark);
-  text-decoration: none;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.9rem;
-}
-
-.back-link:hover {
+  background: var(--bg);
+  font-family: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: var(--ink);
+  padding: 56px 24px;
 }
 
-.menu-header {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.menu-header h1 {
-  margin-bottom: 1rem;
-}
-
-.menu-note {
-  max-width: 560px;
+.cakes-menu {
+  max-width: 760px;
   margin: 0 auto;
-  color: var(--rose-dark);
-  font-style: italic;
-  line-height: 1.5;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 64px 64px 52px;
 }
 
-.flavor-grid {
+@media (max-width: 640px) {
+  .cakes-menu {
+    padding: 40px 24px 36px;
+  }
+}
+
+.cakes-back {
+  display: inline-block;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.cakes-back:hover {
+  color: var(--accent-hover);
+}
+
+.cakes-menu h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 62px;
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  margin: 22px 0 0;
+}
+
+.cakes-intro {
+  max-width: 52ch;
+  color: var(--muted);
+  font-weight: 300;
+  font-size: 15.5px;
+  line-height: 1.7;
+  margin: 18px 0 0;
+}
+
+.cakes-section {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin: 56px 0 0;
+}
+
+.cakes-section.premium {
+  margin-top: 52px;
+}
+
+.cakes-section h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 34px;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.cakes-section .rule {
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.price-key {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.75rem;
-  margin-bottom: 3rem;
-}
-
-.flavor-card {
-  background: var(--cream);
-  border: 1px solid var(--blush);
-  border-radius: 12px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 4px;
   overflow: hidden;
+  margin: 20px 0 0;
 }
 
-.flavor-photo {
+.price-cell {
+  background: var(--accent-soft);
+  padding: 16px 18px;
+  text-align: center;
+}
+
+.price-cell .size {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.price-cell .price {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  margin: 4px 0 2px;
+}
+
+.price-cell .servings {
+  font-size: 11.5px;
+  font-weight: 300;
+  color: var(--muted);
+}
+
+.cake-row {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+  padding: 26px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.cake-thumb {
+  width: 132px;
+  height: 132px;
+  flex: none;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--accent-soft);
+}
+
+.cake-thumb img {
   display: block;
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 100%;
   object-fit: cover;
 }
 
-.flavor-card h2 {
-  margin: 1.25rem 1.5rem 0.75rem;
-  font-size: 1.15rem;
+.cake-name {
+  font-family: "Cormorant Garamond", serif;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  font-size: 26px;
+  margin: 0 0 8px;
 }
 
-.flavor-card ul {
-  margin: 0 1.5rem 1rem;
-  padding-left: 1.1rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.92rem;
-  line-height: 1.6;
-}
-
-.flavor-price {
-  margin: 0 1.5rem 1.5rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--rose-dark);
-}
-
-.size-guide {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.size-guide h2 {
-  font-size: 1.3rem;
-  font-weight: 400;
-  margin-bottom: 1.5rem;
-}
-
-.size-guide-row {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  flex-wrap: wrap;
-}
-
-.size-guide-row div {
+.cake-layers {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 3px;
 }
 
-.size-guide-row span {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.85rem;
-  color: var(--rose-dark);
+.cake-layers span {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.4;
 }
 
-.menu .instagram-link {
-  display: block;
+.order-cta {
+  margin-top: 44px;
   text-align: center;
-  width: fit-content;
-  margin: 0 auto;
+}
+
+.order-button {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 100px;
+}
+
+.order-button:hover {
+  background: var(--accent-hover);
 }
