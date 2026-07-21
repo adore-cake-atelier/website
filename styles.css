@@ -176,14 +176,18 @@ body.main-page {
 /* Custom Cakes Menu page */
 
 body.cakes-menu-page {
-  --bg: #f4ede3;
-  --paper: #fffdf9;
-  --ink: #2c2420;
-  --muted: #8c7f74;
-  --line: #e8ddce;
-  --accent: #9a4a54;
-  --accent-hover: #7c3842;
-  --accent-soft: #f1e3df;
+  --bg: #7c2450;
+  --paper: #f1ece1;
+  --ink: #3a2530;
+  --muted: #a08492;
+  --line: #ddd1c8;
+  --accent: #7c2450;
+  --accent-hover: #c47eb0;
+  --accent-soft: color-mix(in srgb, var(--accent) 14%, var(--paper));
+  --wine: #7c2450;
+  --milky: #f1ece1;
+  --purple: #c47eb0;
+  --pink: #ffa6ce;
   display: block;
   background: var(--bg);
   font-family: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -220,7 +224,7 @@ body.cakes-menu-page {
 }
 
 .cakes-menu h1 {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Playfair Display", serif;
   font-weight: 500;
   font-size: 62px;
   line-height: 1.02;
@@ -249,7 +253,7 @@ body.cakes-menu-page {
 }
 
 .cakes-section h2 {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Playfair Display", serif;
   font-weight: 500;
   font-size: 34px;
   letter-spacing: -0.01em;
@@ -287,7 +291,7 @@ body.cakes-menu-page {
 }
 
 .price-cell .price {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Playfair Display", serif;
   font-size: 30px;
   margin: 4px 0 2px;
 }
@@ -323,7 +327,7 @@ body.cakes-menu-page {
 }
 
 .cake-name {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Playfair Display", serif;
   font-weight: 600;
   font-size: 26px;
   margin: 0 0 8px;
@@ -342,23 +346,3 @@ body.cakes-menu-page {
   line-height: 1.4;
 }
 
-.order-cta {
-  margin-top: 44px;
-  text-align: center;
-}
-
-.order-button {
-  display: inline-block;
-  background: var(--accent);
-  color: #fff;
-  font-size: 13px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 15px 30px;
-  border-radius: 100px;
-}
-
-.order-button:hover {
-  background: var(--accent-hover);
-}
