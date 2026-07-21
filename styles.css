@@ -27,18 +27,12 @@ body {
 }
 
 .logo {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 96px;
-  height: 96px;
+  display: block;
+  width: 220px;
+  max-width: 60vw;
+  height: auto;
   margin: 0 auto 1.5rem;
-  border-radius: 50%;
-  background: var(--rose);
-  color: var(--cream);
-  font-size: 1.5rem;
-  letter-spacing: 0.08em;
-  font-weight: 600;
+  border-radius: 8px;
 }
 
 h1 {
@@ -122,18 +116,25 @@ body.menu-page {
   background: var(--cream);
   border: 1px solid var(--blush);
   border-radius: 12px;
-  padding: 1.5rem;
+  overflow: hidden;
+}
+
+.flavor-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 
 .flavor-card h2 {
-  margin: 0 0 0.75rem;
+  margin: 1.25rem 1.5rem 0.75rem;
   font-size: 1.15rem;
   font-weight: 600;
   letter-spacing: 0.02em;
 }
 
 .flavor-card ul {
-  margin: 0 0 1rem;
+  margin: 0 1.5rem 1rem;
   padding-left: 1.1rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 0.92rem;
@@ -141,7 +142,7 @@ body.menu-page {
 }
 
 .flavor-price {
-  margin: 0;
+  margin: 0 1.5rem 1.5rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
