@@ -29,7 +29,7 @@ body.main-page {
 
 .main-card {
   width: 100%;
-  max-width: 560px;
+  max-width: 1080px;
   background: var(--milky);
   padding: 88px 64px 72px;
   box-shadow: 0 30px 80px -50px rgba(30, 10, 20, 0.7);
